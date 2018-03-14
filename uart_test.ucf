@@ -1,0 +1,27 @@
+##
+## uart_test.ucf
+## Universal Constraints File for UART Driver
+##
+## Created by Juan Diego Ocampo on 13/05/2018.
+## Copyright © 2018 Juan Diego Ocampo. All rights reserved.
+##
+
+# CLK Signal
+NET "clk"   LOC = "E3"	| IOSTANDARD = "LVCMOS33";
+NET "clk" TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100 MHz HIGH 50%;
+
+# LED's
+NET "rx_led<0>" LOC = T8 | IOSTANDARD = LVCMOS33; # LED_0
+NET "rx_led<1>" LOC = V9 | IOSTANDARD = LVCMOS33; # LED_1
+NET "rx_led<2>" LOC = R8 | IOSTANDARD = LVCMOS33; # LED_2
+NET "rx_led<3>" LOC = T6 | IOSTANDARD = LVCMOS33; # LED_3
+NET "rx_led<4>" LOC = T5 | IOSTANDARD = LVCMOS33; # LED_4
+NET "rx_led<5>" LOC = T4 | IOSTANDARD = LVCMOS33; # LED_5
+NET "rx_led<6>" LOC = U7 | IOSTANDARD = LVCMOS33; # LED_6
+NET "rx_led<7>" LOC = U6 | IOSTANDARD = LVCMOS33; # LED_7
+
+# UART Channels
+NET "uart_rxd" LOC = B16 | IOSTANDARD = LVCMOS33; # Pmod JXADC-2
+NET "uart_txd" LOC = B18 | IOSTANDARD = LVCMOS33; # Pmod JXADC-3
+NET "reset"    LOC = U9  | IOSTANDARD = LVCMOS33; # SWITCH_0

@@ -1,0 +1,1206 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -v 25 project_r.ncd
+project.pcf
+
+Design file:              project_r.ncd
+Physical constraint file: project.pcf
+Device,package,speed:     xc7a100t,csg324,C,-3 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report, limited to 25 items per constraint
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 452 paths analyzed, 101 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   3.803ns.
+--------------------------------------------------------------------------------
+Slack:                  6.197ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               periferico/uart_rxd2 (FF)
+  Destination:          periferico/rx_data_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.804ns (Levels of Logic = 1)
+  Clock Path Skew:      0.036ns (0.640 - 0.604)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: periferico/uart_rxd2 to periferico/rx_data_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y90.DMUX    Tshcko                0.429   periferico/uart_rxd2
+                                                       periferico/uart_rxd2
+    SLICE_X83Y66.D4      net (fanout=7)        1.862   periferico/uart_rxd2
+    SLICE_X83Y66.D       Tilo                  0.097   periferico/rx_bitcount<1>
+                                                       periferico/_n0273_inv
+    OLOGIC_X1Y51.OCE     net (fanout=8)        1.101   periferico/_n0273_inv
+    OLOGIC_X1Y51.CLK     Tooceck               0.315   periferico/rx_data<0>
+                                                       periferico/rx_data_0
+    -------------------------------------------------  ---------------------------
+    Total                                      3.804ns (0.841ns logic, 2.963ns route)
+                                                       (22.1% logic, 77.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.292ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               periferico/uart_rxd2 (FF)
+  Destination:          periferico/rx_data_2 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.709ns (Levels of Logic = 1)
+  Clock Path Skew:      0.036ns (0.640 - 0.604)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: periferico/uart_rxd2 to periferico/rx_data_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y90.DMUX    Tshcko                0.429   periferico/uart_rxd2
+                                                       periferico/uart_rxd2
+    SLICE_X83Y66.D4      net (fanout=7)        1.862   periferico/uart_rxd2
+    SLICE_X83Y66.D       Tilo                  0.097   periferico/rx_bitcount<1>
+                                                       periferico/_n0273_inv
+    OLOGIC_X1Y52.OCE     net (fanout=8)        1.006   periferico/_n0273_inv
+    OLOGIC_X1Y52.CLK     Tooceck               0.315   periferico/rx_data<2>
+                                                       periferico/rx_data_2
+    -------------------------------------------------  ---------------------------
+    Total                                      3.709ns (0.841ns logic, 2.868ns route)
+                                                       (22.7% logic, 77.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.311ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               periferico/uart_rxd2 (FF)
+  Destination:          periferico/rx_data_3 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.690ns (Levels of Logic = 1)
+  Clock Path Skew:      0.036ns (0.640 - 0.604)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: periferico/uart_rxd2 to periferico/rx_data_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y90.DMUX    Tshcko                0.429   periferico/uart_rxd2
+                                                       periferico/uart_rxd2
+    SLICE_X83Y66.D4      net (fanout=7)        1.862   periferico/uart_rxd2
+    SLICE_X83Y66.D       Tilo                  0.097   periferico/rx_bitcount<1>
+                                                       periferico/_n0273_inv
+    OLOGIC_X1Y53.OCE     net (fanout=8)        0.987   periferico/_n0273_inv
+    OLOGIC_X1Y53.CLK     Tooceck               0.315   periferico/rx_data<3>
+                                                       periferico/rx_data_3
+    -------------------------------------------------  ---------------------------
+    Total                                      3.690ns (0.841ns logic, 2.849ns route)
+                                                       (22.8% logic, 77.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.404ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               periferico/enable16_counter_3 (FF)
+  Destination:          periferico/rx_data_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.519ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.042ns (0.640 - 0.682)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: periferico/enable16_counter_3 to periferico/rx_data_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X85Y65.BQ      Tcko                  0.341   periferico/enable16_counter<4>
+                                                       periferico/enable16_counter_3
+    SLICE_X82Y66.B2      net (fanout=7)        0.638   periferico/enable16_counter<3>
+    SLICE_X82Y66.B       Tilo                  0.097   periferico/rx_count16<3>
+                                                       periferico/enable16<15>1
+    SLICE_X85Y66.A1      net (fanout=6)        0.623   periferico/enable16
+    SLICE_X85Y66.A       Tilo                  0.097   periferico/_n0360_inv
+                                                       periferico/_n03661
+    SLICE_X83Y66.D6      net (fanout=3)        0.210   periferico/_n0366
+    SLICE_X83Y66.D       Tilo                  0.097   periferico/rx_bitcount<1>
+                                                       periferico/_n0273_inv
+    OLOGIC_X1Y51.OCE     net (fanout=8)        1.101   periferico/_n0273_inv
+    OLOGIC_X1Y51.CLK     Tooceck               0.315   periferico/rx_data<0>
+                                                       periferico/rx_data_0
+    -------------------------------------------------  ---------------------------
+    Total                                      3.519ns (0.947ns logic, 2.572ns route)
+                                                       (26.9% logic, 73.1% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.425ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               periferico/uart_rxd2 (FF)
+  Destination:          periferico/rx_data_7 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.575ns (Levels of Logic = 1)
+  Clock Path Skew:      0.035ns (0.639 - 0.604)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: periferico/uart_rxd2 to periferico/rx_data_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y90.DMUX    Tshcko                0.429   periferico/uart_rxd2
+                                                       periferico/uart_rxd2
+    SLICE_X83Y66.D4      net (fanout=7)        1.862   periferico/uart_rxd2
+    SLICE_X83Y66.D       Tilo                  0.097   periferico/rx_bitcount<1>
+                                                       periferico/_n0273_inv
+    OLOGIC_X1Y55.OCE     net (fanout=8)        0.872   periferico/_n0273_inv
+    OLOGIC_X1Y55.CLK     Tooceck               0.315   periferico/rx_data<7>
+                                                       periferico/rx_data_7
+    -------------------------------------------------  ---------------------------
+    Total                                      3.575ns (0.841ns logic, 2.734ns route)
+                                                       (23.5% logic, 76.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.458ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               periferico/enable16_counter_1 (FF)
+  Destination:          periferico/rx_data_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.465ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.042ns (0.640 - 0.682)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: periferico/enable16_counter_1 to periferico/rx_data_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X85Y65.AQ      Tcko                  0.341   periferico/enable16_counter<4>
+                                                       periferico/enable16_counter_1
+    SLICE_X82Y66.B3      net (fanout=7)        0.584   periferico/enable16_counter<1>
+    SLICE_X82Y66.B       Tilo                  0.097   periferico/rx_count16<3>
+                                                       periferico/enable16<15>1
+    SLICE_X85Y66.A1      net (fanout=6)        0.623   periferico/enable16
+    SLICE_X85Y66.A       Tilo                  0.097   periferico/_n0360_inv
+                                                       periferico/_n03661
+    SLICE_X83Y66.D6      net (fanout=3)        0.210   periferico/_n0366
+    SLICE_X83Y66.D       Tilo                  0.097   periferico/rx_bitcount<1>
+                                                       periferico/_n0273_inv
+    OLOGIC_X1Y51.OCE     net (fanout=8)        1.101   periferico/_n0273_inv
+    OLOGIC_X1Y51.CLK     Tooceck               0.315   periferico/rx_data<0>
+                                                       periferico/rx_data_0
+    -------------------------------------------------  ---------------------------
+    Total                                      3.465ns (0.947ns logic, 2.518ns route)
+                                                       (27.3% logic, 72.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.499ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               periferico/enable16_counter_3 (FF)
+  Destination:          periferico/rx_data_2 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.424ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.042ns (0.640 - 0.682)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: periferico/enable16_counter_3 to periferico/rx_data_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X85Y65.BQ      Tcko                  0.341   periferico/enable16_counter<4>
+                                                       periferico/enable16_counter_3
+    SLICE_X82Y66.B2      net (fanout=7)        0.638   periferico/enable16_counter<3>
+    SLICE_X82Y66.B       Tilo                  0.097   periferico/rx_count16<3>
+                                                       periferico/enable16<15>1
+    SLICE_X85Y66.A1      net (fanout=6)        0.623   periferico/enable16
+    SLICE_X85Y66.A       Tilo                  0.097   periferico/_n0360_inv
+                                                       periferico/_n03661
+    SLICE_X83Y66.D6      net (fanout=3)        0.210   periferico/_n0366
+    SLICE_X83Y66.D       Tilo                  0.097   periferico/rx_bitcount<1>
+                                                       periferico/_n0273_inv
+    OLOGIC_X1Y52.OCE     net (fanout=8)        1.006   periferico/_n0273_inv
+    OLOGIC_X1Y52.CLK     Tooceck               0.315   periferico/rx_data<2>
+                                                       periferico/rx_data_2
+    -------------------------------------------------  ---------------------------
+    Total                                      3.424ns (0.947ns logic, 2.477ns route)
+                                                       (27.7% logic, 72.3% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.518ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               periferico/enable16_counter_3 (FF)
+  Destination:          periferico/rx_data_3 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.405ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.042ns (0.640 - 0.682)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: periferico/enable16_counter_3 to periferico/rx_data_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X85Y65.BQ      Tcko                  0.341   periferico/enable16_counter<4>
+                                                       periferico/enable16_counter_3
+    SLICE_X82Y66.B2      net (fanout=7)        0.638   periferico/enable16_counter<3>
+    SLICE_X82Y66.B       Tilo                  0.097   periferico/rx_count16<3>
+                                                       periferico/enable16<15>1
+    SLICE_X85Y66.A1      net (fanout=6)        0.623   periferico/enable16
+    SLICE_X85Y66.A       Tilo                  0.097   periferico/_n0360_inv
+                                                       periferico/_n03661
+    SLICE_X83Y66.D6      net (fanout=3)        0.210   periferico/_n0366
+    SLICE_X83Y66.D       Tilo                  0.097   periferico/rx_bitcount<1>
+                                                       periferico/_n0273_inv
+    OLOGIC_X1Y53.OCE     net (fanout=8)        0.987   periferico/_n0273_inv
+    OLOGIC_X1Y53.CLK     Tooceck               0.315   periferico/rx_data<3>
+                                                       periferico/rx_data_3
+    -------------------------------------------------  ---------------------------
+    Total                                      3.405ns (0.947ns logic, 2.458ns route)
+                                                       (27.8% logic, 72.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.520ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               periferico/uart_rxd2 (FF)
+  Destination:          periferico/rx_data_6 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.480ns (Levels of Logic = 1)
+  Clock Path Skew:      0.035ns (0.639 - 0.604)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: periferico/uart_rxd2 to periferico/rx_data_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y90.DMUX    Tshcko                0.429   periferico/uart_rxd2
+                                                       periferico/uart_rxd2
+    SLICE_X83Y66.D4      net (fanout=7)        1.862   periferico/uart_rxd2
+    SLICE_X83Y66.D       Tilo                  0.097   periferico/rx_bitcount<1>
+                                                       periferico/_n0273_inv
+    OLOGIC_X1Y56.OCE     net (fanout=8)        0.777   periferico/_n0273_inv
+    OLOGIC_X1Y56.CLK     Tooceck               0.315   periferico/rx_data<6>
+                                                       periferico/rx_data_6
+    -------------------------------------------------  ---------------------------
+    Total                                      3.480ns (0.841ns logic, 2.639ns route)
+                                                       (24.2% logic, 75.8% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.551ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               periferico/uart_rxd2 (FF)
+  Destination:          periferico/rx_bitcount_3 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.450ns (Levels of Logic = 1)
+  Clock Path Skew:      0.036ns (0.640 - 0.604)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: periferico/uart_rxd2 to periferico/rx_bitcount_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y90.DMUX    Tshcko                0.429   periferico/uart_rxd2
+                                                       periferico/uart_rxd2
+    SLICE_X82Y66.C2      net (fanout=7)        2.049   periferico/uart_rxd2
+    SLICE_X82Y66.CMUX    Tilo                  0.242   periferico/rx_count16<3>
+                                                       periferico/Mcount_rx_bitcount_val1
+    SLICE_X84Y66.SR      net (fanout=2)        0.357   periferico/Mcount_rx_bitcount_val
+    SLICE_X84Y66.CLK     Tsrck                 0.373   periferico/rx_bitcount<3>
+                                                       periferico/rx_bitcount_3
+    -------------------------------------------------  ---------------------------
+    Total                                      3.450ns (1.044ns logic, 2.406ns route)
+                                                       (30.3% logic, 69.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.551ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               periferico/uart_rxd2 (FF)
+  Destination:          periferico/rx_bitcount_2 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.450ns (Levels of Logic = 1)
+  Clock Path Skew:      0.036ns (0.640 - 0.604)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: periferico/uart_rxd2 to periferico/rx_bitcount_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y90.DMUX    Tshcko                0.429   periferico/uart_rxd2
+                                                       periferico/uart_rxd2
+    SLICE_X82Y66.C2      net (fanout=7)        2.049   periferico/uart_rxd2
+    SLICE_X82Y66.CMUX    Tilo                  0.242   periferico/rx_count16<3>
+                                                       periferico/Mcount_rx_bitcount_val1
+    SLICE_X84Y66.SR      net (fanout=2)        0.357   periferico/Mcount_rx_bitcount_val
+    SLICE_X84Y66.CLK     Tsrck                 0.373   periferico/rx_bitcount<3>
+                                                       periferico/rx_bitcount_2
+    -------------------------------------------------  ---------------------------
+    Total                                      3.450ns (1.044ns logic, 2.406ns route)
+                                                       (30.3% logic, 69.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.553ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               periferico/enable16_counter_1 (FF)
+  Destination:          periferico/rx_data_2 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.370ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.042ns (0.640 - 0.682)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: periferico/enable16_counter_1 to periferico/rx_data_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X85Y65.AQ      Tcko                  0.341   periferico/enable16_counter<4>
+                                                       periferico/enable16_counter_1
+    SLICE_X82Y66.B3      net (fanout=7)        0.584   periferico/enable16_counter<1>
+    SLICE_X82Y66.B       Tilo                  0.097   periferico/rx_count16<3>
+                                                       periferico/enable16<15>1
+    SLICE_X85Y66.A1      net (fanout=6)        0.623   periferico/enable16
+    SLICE_X85Y66.A       Tilo                  0.097   periferico/_n0360_inv
+                                                       periferico/_n03661
+    SLICE_X83Y66.D6      net (fanout=3)        0.210   periferico/_n0366
+    SLICE_X83Y66.D       Tilo                  0.097   periferico/rx_bitcount<1>
+                                                       periferico/_n0273_inv
+    OLOGIC_X1Y52.OCE     net (fanout=8)        1.006   periferico/_n0273_inv
+    OLOGIC_X1Y52.CLK     Tooceck               0.315   periferico/rx_data<2>
+                                                       periferico/rx_data_2
+    -------------------------------------------------  ---------------------------
+    Total                                      3.370ns (0.947ns logic, 2.423ns route)
+                                                       (28.1% logic, 71.9% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.572ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               periferico/enable16_counter_1 (FF)
+  Destination:          periferico/rx_data_3 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.351ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.042ns (0.640 - 0.682)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: periferico/enable16_counter_1 to periferico/rx_data_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X85Y65.AQ      Tcko                  0.341   periferico/enable16_counter<4>
+                                                       periferico/enable16_counter_1
+    SLICE_X82Y66.B3      net (fanout=7)        0.584   periferico/enable16_counter<1>
+    SLICE_X82Y66.B       Tilo                  0.097   periferico/rx_count16<3>
+                                                       periferico/enable16<15>1
+    SLICE_X85Y66.A1      net (fanout=6)        0.623   periferico/enable16
+    SLICE_X85Y66.A       Tilo                  0.097   periferico/_n0360_inv
+                                                       periferico/_n03661
+    SLICE_X83Y66.D6      net (fanout=3)        0.210   periferico/_n0366
+    SLICE_X83Y66.D       Tilo                  0.097   periferico/rx_bitcount<1>
+                                                       periferico/_n0273_inv
+    OLOGIC_X1Y53.OCE     net (fanout=8)        0.987   periferico/_n0273_inv
+    OLOGIC_X1Y53.CLK     Tooceck               0.315   periferico/rx_data<3>
+                                                       periferico/rx_data_3
+    -------------------------------------------------  ---------------------------
+    Total                                      3.351ns (0.947ns logic, 2.404ns route)
+                                                       (28.3% logic, 71.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.573ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               periferico/uart_rxd2 (FF)
+  Destination:          periferico/rx_data_4 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.415ns (Levels of Logic = 1)
+  Clock Path Skew:      0.023ns (0.627 - 0.604)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: periferico/uart_rxd2 to periferico/rx_data_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y90.DMUX    Tshcko                0.429   periferico/uart_rxd2
+                                                       periferico/uart_rxd2
+    SLICE_X83Y66.D4      net (fanout=7)        1.862   periferico/uart_rxd2
+    SLICE_X83Y66.D       Tilo                  0.097   periferico/rx_bitcount<1>
+                                                       periferico/_n0273_inv
+    OLOGIC_X1Y76.OCE     net (fanout=8)        0.712   periferico/_n0273_inv
+    OLOGIC_X1Y76.CLK     Tooceck               0.315   periferico/rx_data<4>
+                                                       periferico/rx_data_4
+    -------------------------------------------------  ---------------------------
+    Total                                      3.415ns (0.841ns logic, 2.574ns route)
+                                                       (24.6% logic, 75.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.600ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               periferico/enable16_counter_4 (FF)
+  Destination:          periferico/rx_data_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.323ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.042ns (0.640 - 0.682)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: periferico/enable16_counter_4 to periferico/rx_data_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X85Y65.CQ      Tcko                  0.341   periferico/enable16_counter<4>
+                                                       periferico/enable16_counter_4
+    SLICE_X82Y66.B4      net (fanout=7)        0.442   periferico/enable16_counter<4>
+    SLICE_X82Y66.B       Tilo                  0.097   periferico/rx_count16<3>
+                                                       periferico/enable16<15>1
+    SLICE_X85Y66.A1      net (fanout=6)        0.623   periferico/enable16
+    SLICE_X85Y66.A       Tilo                  0.097   periferico/_n0360_inv
+                                                       periferico/_n03661
+    SLICE_X83Y66.D6      net (fanout=3)        0.210   periferico/_n0366
+    SLICE_X83Y66.D       Tilo                  0.097   periferico/rx_bitcount<1>
+                                                       periferico/_n0273_inv
+    OLOGIC_X1Y51.OCE     net (fanout=8)        1.101   periferico/_n0273_inv
+    OLOGIC_X1Y51.CLK     Tooceck               0.315   periferico/rx_data<0>
+                                                       periferico/rx_data_0
+    -------------------------------------------------  ---------------------------
+    Total                                      3.323ns (0.947ns logic, 2.376ns route)
+                                                       (28.5% logic, 71.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.632ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               periferico/enable16_counter_3 (FF)
+  Destination:          periferico/rx_data_7 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.290ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.043ns (0.639 - 0.682)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: periferico/enable16_counter_3 to periferico/rx_data_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X85Y65.BQ      Tcko                  0.341   periferico/enable16_counter<4>
+                                                       periferico/enable16_counter_3
+    SLICE_X82Y66.B2      net (fanout=7)        0.638   periferico/enable16_counter<3>
+    SLICE_X82Y66.B       Tilo                  0.097   periferico/rx_count16<3>
+                                                       periferico/enable16<15>1
+    SLICE_X85Y66.A1      net (fanout=6)        0.623   periferico/enable16
+    SLICE_X85Y66.A       Tilo                  0.097   periferico/_n0360_inv
+                                                       periferico/_n03661
+    SLICE_X83Y66.D6      net (fanout=3)        0.210   periferico/_n0366
+    SLICE_X83Y66.D       Tilo                  0.097   periferico/rx_bitcount<1>
+                                                       periferico/_n0273_inv
+    OLOGIC_X1Y55.OCE     net (fanout=8)        0.872   periferico/_n0273_inv
+    OLOGIC_X1Y55.CLK     Tooceck               0.315   periferico/rx_data<7>
+                                                       periferico/rx_data_7
+    -------------------------------------------------  ---------------------------
+    Total                                      3.290ns (0.947ns logic, 2.343ns route)
+                                                       (28.8% logic, 71.2% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.632ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               periferico/uart_rxd2 (FF)
+  Destination:          periferico/rx_data_1 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.368ns (Levels of Logic = 1)
+  Clock Path Skew:      0.035ns (0.639 - 0.604)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: periferico/uart_rxd2 to periferico/rx_data_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y90.DMUX    Tshcko                0.429   periferico/uart_rxd2
+                                                       periferico/uart_rxd2
+    SLICE_X83Y66.D4      net (fanout=7)        1.862   periferico/uart_rxd2
+    SLICE_X83Y66.D       Tilo                  0.097   periferico/rx_bitcount<1>
+                                                       periferico/_n0273_inv
+    OLOGIC_X1Y57.OCE     net (fanout=8)        0.665   periferico/_n0273_inv
+    OLOGIC_X1Y57.CLK     Tooceck               0.315   periferico/rx_data<1>
+                                                       periferico/rx_data_1
+    -------------------------------------------------  ---------------------------
+    Total                                      3.368ns (0.841ns logic, 2.527ns route)
+                                                       (25.0% logic, 75.0% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.642ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               periferico/enable16_counter_2 (FF)
+  Destination:          periferico/rx_data_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.281ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.042ns (0.640 - 0.682)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: periferico/enable16_counter_2 to periferico/rx_data_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X84Y65.CQ      Tcko                  0.393   periferico/enable16_counter<2>
+                                                       periferico/enable16_counter_2
+    SLICE_X82Y66.B6      net (fanout=7)        0.348   periferico/enable16_counter<2>
+    SLICE_X82Y66.B       Tilo                  0.097   periferico/rx_count16<3>
+                                                       periferico/enable16<15>1
+    SLICE_X85Y66.A1      net (fanout=6)        0.623   periferico/enable16
+    SLICE_X85Y66.A       Tilo                  0.097   periferico/_n0360_inv
+                                                       periferico/_n03661
+    SLICE_X83Y66.D6      net (fanout=3)        0.210   periferico/_n0366
+    SLICE_X83Y66.D       Tilo                  0.097   periferico/rx_bitcount<1>
+                                                       periferico/_n0273_inv
+    OLOGIC_X1Y51.OCE     net (fanout=8)        1.101   periferico/_n0273_inv
+    OLOGIC_X1Y51.CLK     Tooceck               0.315   periferico/rx_data<0>
+                                                       periferico/rx_data_0
+    -------------------------------------------------  ---------------------------
+    Total                                      3.281ns (0.999ns logic, 2.282ns route)
+                                                       (30.4% logic, 69.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.646ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               periferico/enable16_counter_0 (FF)
+  Destination:          periferico/rx_data_0 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.277ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.042ns (0.640 - 0.682)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: periferico/enable16_counter_0 to periferico/rx_data_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X84Y65.AQ      Tcko                  0.393   periferico/enable16_counter<2>
+                                                       periferico/enable16_counter_0
+    SLICE_X82Y66.B5      net (fanout=7)        0.344   periferico/enable16_counter<0>
+    SLICE_X82Y66.B       Tilo                  0.097   periferico/rx_count16<3>
+                                                       periferico/enable16<15>1
+    SLICE_X85Y66.A1      net (fanout=6)        0.623   periferico/enable16
+    SLICE_X85Y66.A       Tilo                  0.097   periferico/_n0360_inv
+                                                       periferico/_n03661
+    SLICE_X83Y66.D6      net (fanout=3)        0.210   periferico/_n0366
+    SLICE_X83Y66.D       Tilo                  0.097   periferico/rx_bitcount<1>
+                                                       periferico/_n0273_inv
+    OLOGIC_X1Y51.OCE     net (fanout=8)        1.101   periferico/_n0273_inv
+    OLOGIC_X1Y51.CLK     Tooceck               0.315   periferico/rx_data<0>
+                                                       periferico/rx_data_0
+    -------------------------------------------------  ---------------------------
+    Total                                      3.277ns (0.999ns logic, 2.278ns route)
+                                                       (30.5% logic, 69.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.682ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               periferico/uart_rxd2 (FF)
+  Destination:          periferico/rx_data_5 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.306ns (Levels of Logic = 1)
+  Clock Path Skew:      0.023ns (0.627 - 0.604)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: periferico/uart_rxd2 to periferico/rx_data_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y90.DMUX    Tshcko                0.429   periferico/uart_rxd2
+                                                       periferico/uart_rxd2
+    SLICE_X83Y66.D4      net (fanout=7)        1.862   periferico/uart_rxd2
+    SLICE_X83Y66.D       Tilo                  0.097   periferico/rx_bitcount<1>
+                                                       periferico/_n0273_inv
+    OLOGIC_X1Y75.OCE     net (fanout=8)        0.603   periferico/_n0273_inv
+    OLOGIC_X1Y75.CLK     Tooceck               0.315   periferico/rx_data<5>
+                                                       periferico/rx_data_5
+    -------------------------------------------------  ---------------------------
+    Total                                      3.306ns (0.841ns logic, 2.465ns route)
+                                                       (25.4% logic, 74.6% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.686ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               periferico/enable16_counter_1 (FF)
+  Destination:          periferico/rx_data_7 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.236ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.043ns (0.639 - 0.682)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: periferico/enable16_counter_1 to periferico/rx_data_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X85Y65.AQ      Tcko                  0.341   periferico/enable16_counter<4>
+                                                       periferico/enable16_counter_1
+    SLICE_X82Y66.B3      net (fanout=7)        0.584   periferico/enable16_counter<1>
+    SLICE_X82Y66.B       Tilo                  0.097   periferico/rx_count16<3>
+                                                       periferico/enable16<15>1
+    SLICE_X85Y66.A1      net (fanout=6)        0.623   periferico/enable16
+    SLICE_X85Y66.A       Tilo                  0.097   periferico/_n0360_inv
+                                                       periferico/_n03661
+    SLICE_X83Y66.D6      net (fanout=3)        0.210   periferico/_n0366
+    SLICE_X83Y66.D       Tilo                  0.097   periferico/rx_bitcount<1>
+                                                       periferico/_n0273_inv
+    OLOGIC_X1Y55.OCE     net (fanout=8)        0.872   periferico/_n0273_inv
+    OLOGIC_X1Y55.CLK     Tooceck               0.315   periferico/rx_data<7>
+                                                       periferico/rx_data_7
+    -------------------------------------------------  ---------------------------
+    Total                                      3.236ns (0.947ns logic, 2.289ns route)
+                                                       (29.3% logic, 70.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.695ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               periferico/enable16_counter_4 (FF)
+  Destination:          periferico/rx_data_2 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.228ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.042ns (0.640 - 0.682)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: periferico/enable16_counter_4 to periferico/rx_data_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X85Y65.CQ      Tcko                  0.341   periferico/enable16_counter<4>
+                                                       periferico/enable16_counter_4
+    SLICE_X82Y66.B4      net (fanout=7)        0.442   periferico/enable16_counter<4>
+    SLICE_X82Y66.B       Tilo                  0.097   periferico/rx_count16<3>
+                                                       periferico/enable16<15>1
+    SLICE_X85Y66.A1      net (fanout=6)        0.623   periferico/enable16
+    SLICE_X85Y66.A       Tilo                  0.097   periferico/_n0360_inv
+                                                       periferico/_n03661
+    SLICE_X83Y66.D6      net (fanout=3)        0.210   periferico/_n0366
+    SLICE_X83Y66.D       Tilo                  0.097   periferico/rx_bitcount<1>
+                                                       periferico/_n0273_inv
+    OLOGIC_X1Y52.OCE     net (fanout=8)        1.006   periferico/_n0273_inv
+    OLOGIC_X1Y52.CLK     Tooceck               0.315   periferico/rx_data<2>
+                                                       periferico/rx_data_2
+    -------------------------------------------------  ---------------------------
+    Total                                      3.228ns (0.947ns logic, 2.281ns route)
+                                                       (29.3% logic, 70.7% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.714ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               periferico/enable16_counter_4 (FF)
+  Destination:          periferico/rx_data_3 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.209ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.042ns (0.640 - 0.682)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: periferico/enable16_counter_4 to periferico/rx_data_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X85Y65.CQ      Tcko                  0.341   periferico/enable16_counter<4>
+                                                       periferico/enable16_counter_4
+    SLICE_X82Y66.B4      net (fanout=7)        0.442   periferico/enable16_counter<4>
+    SLICE_X82Y66.B       Tilo                  0.097   periferico/rx_count16<3>
+                                                       periferico/enable16<15>1
+    SLICE_X85Y66.A1      net (fanout=6)        0.623   periferico/enable16
+    SLICE_X85Y66.A       Tilo                  0.097   periferico/_n0360_inv
+                                                       periferico/_n03661
+    SLICE_X83Y66.D6      net (fanout=3)        0.210   periferico/_n0366
+    SLICE_X83Y66.D       Tilo                  0.097   periferico/rx_bitcount<1>
+                                                       periferico/_n0273_inv
+    OLOGIC_X1Y53.OCE     net (fanout=8)        0.987   periferico/_n0273_inv
+    OLOGIC_X1Y53.CLK     Tooceck               0.315   periferico/rx_data<3>
+                                                       periferico/rx_data_3
+    -------------------------------------------------  ---------------------------
+    Total                                      3.209ns (0.947ns logic, 2.262ns route)
+                                                       (29.5% logic, 70.5% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.727ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               periferico/enable16_counter_3 (FF)
+  Destination:          periferico/rx_data_6 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.195ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.043ns (0.639 - 0.682)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: periferico/enable16_counter_3 to periferico/rx_data_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X85Y65.BQ      Tcko                  0.341   periferico/enable16_counter<4>
+                                                       periferico/enable16_counter_3
+    SLICE_X82Y66.B2      net (fanout=7)        0.638   periferico/enable16_counter<3>
+    SLICE_X82Y66.B       Tilo                  0.097   periferico/rx_count16<3>
+                                                       periferico/enable16<15>1
+    SLICE_X85Y66.A1      net (fanout=6)        0.623   periferico/enable16
+    SLICE_X85Y66.A       Tilo                  0.097   periferico/_n0360_inv
+                                                       periferico/_n03661
+    SLICE_X83Y66.D6      net (fanout=3)        0.210   periferico/_n0366
+    SLICE_X83Y66.D       Tilo                  0.097   periferico/rx_bitcount<1>
+                                                       periferico/_n0273_inv
+    OLOGIC_X1Y56.OCE     net (fanout=8)        0.777   periferico/_n0273_inv
+    OLOGIC_X1Y56.CLK     Tooceck               0.315   periferico/rx_data<6>
+                                                       periferico/rx_data_6
+    -------------------------------------------------  ---------------------------
+    Total                                      3.195ns (0.947ns logic, 2.248ns route)
+                                                       (29.6% logic, 70.4% route)
+
+--------------------------------------------------------------------------------
+Slack:                  6.737ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               periferico/enable16_counter_2 (FF)
+  Destination:          periferico/rx_data_2 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.186ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.042ns (0.640 - 0.682)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: periferico/enable16_counter_2 to periferico/rx_data_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X84Y65.CQ      Tcko                  0.393   periferico/enable16_counter<2>
+                                                       periferico/enable16_counter_2
+    SLICE_X82Y66.B6      net (fanout=7)        0.348   periferico/enable16_counter<2>
+    SLICE_X82Y66.B       Tilo                  0.097   periferico/rx_count16<3>
+                                                       periferico/enable16<15>1
+    SLICE_X85Y66.A1      net (fanout=6)        0.623   periferico/enable16
+    SLICE_X85Y66.A       Tilo                  0.097   periferico/_n0360_inv
+                                                       periferico/_n03661
+    SLICE_X83Y66.D6      net (fanout=3)        0.210   periferico/_n0366
+    SLICE_X83Y66.D       Tilo                  0.097   periferico/rx_bitcount<1>
+                                                       periferico/_n0273_inv
+    OLOGIC_X1Y52.OCE     net (fanout=8)        1.006   periferico/_n0273_inv
+    OLOGIC_X1Y52.CLK     Tooceck               0.315   periferico/rx_data<2>
+                                                       periferico/rx_data_2
+    -------------------------------------------------  ---------------------------
+    Total                                      3.186ns (0.999ns logic, 2.187ns route)
+                                                       (31.4% logic, 68.6% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 8.408ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.592ns (628.141MHz) (Tbcper_I(Fmax))
+  Physical resource: clk_BUFGP/BUFG/I0
+  Logical resource: clk_BUFGP/BUFG/I0
+  Location pin: BUFGCTRL_X0Y31.I0
+  Clock network: clk_BUFGP/IBUFG
+--------------------------------------------------------------------------------
+Slack: 8.737ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.263ns (791.766MHz) (Tockper)
+  Physical resource: periferico/rx_data<0>/CLK
+  Logical resource: periferico/rx_data_0/CK
+  Location pin: OLOGIC_X1Y51.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 8.737ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.263ns (791.766MHz) (Tockper)
+  Physical resource: periferico/rx_data<1>/CLK
+  Logical resource: periferico/rx_data_1/CK
+  Location pin: OLOGIC_X1Y57.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 8.737ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.263ns (791.766MHz) (Tockper)
+  Physical resource: periferico/rx_data<2>/CLK
+  Logical resource: periferico/rx_data_2/CK
+  Location pin: OLOGIC_X1Y52.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 8.737ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.263ns (791.766MHz) (Tockper)
+  Physical resource: periferico/rx_data<3>/CLK
+  Logical resource: periferico/rx_data_3/CK
+  Location pin: OLOGIC_X1Y53.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 8.737ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.263ns (791.766MHz) (Tockper)
+  Physical resource: periferico/rx_data<4>/CLK
+  Logical resource: periferico/rx_data_4/CK
+  Location pin: OLOGIC_X1Y76.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 8.737ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.263ns (791.766MHz) (Tockper)
+  Physical resource: periferico/rx_data<5>/CLK
+  Logical resource: periferico/rx_data_5/CK
+  Location pin: OLOGIC_X1Y75.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 8.737ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.263ns (791.766MHz) (Tockper)
+  Physical resource: periferico/rx_data<6>/CLK
+  Logical resource: periferico/rx_data_6/CK
+  Location pin: OLOGIC_X1Y56.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 8.737ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.263ns (791.766MHz) (Tockper)
+  Physical resource: periferico/rx_data<7>/CLK
+  Logical resource: periferico/rx_data_7/CK
+  Location pin: OLOGIC_X1Y55.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 8.737ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.263ns (791.766MHz) (Tickper)
+  Physical resource: periferico/uart_rxd1/CLK
+  Logical resource: periferico/uart_rxd1/CK
+  Location pin: ILOGIC_X0Y136.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: periferico/enable16_counter<2>/CLK
+  Logical resource: periferico/enable16_counter_0/CK
+  Location pin: SLICE_X84Y65.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: periferico/enable16_counter<2>/CLK
+  Logical resource: periferico/enable16_counter_0/CK
+  Location pin: SLICE_X84Y65.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.000ns (1000.000MHz) (Tcp)
+  Physical resource: periferico/enable16_counter<2>/CLK
+  Logical resource: periferico/enable16_counter_0/CK
+  Location pin: SLICE_X84Y65.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: periferico/enable16_counter<2>/CLK
+  Logical resource: periferico/enable16_counter_2/CK
+  Location pin: SLICE_X84Y65.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: periferico/enable16_counter<2>/CLK
+  Logical resource: periferico/enable16_counter_2/CK
+  Location pin: SLICE_X84Y65.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.000ns (1000.000MHz) (Tcp)
+  Physical resource: periferico/enable16_counter<2>/CLK
+  Logical resource: periferico/enable16_counter_2/CK
+  Location pin: SLICE_X84Y65.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: periferico/uart_rxd2/CLK
+  Logical resource: periferico/uart_rxd2/CK
+  Location pin: SLICE_X55Y90.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: periferico/uart_rxd2/CLK
+  Logical resource: periferico/uart_rxd2/CK
+  Location pin: SLICE_X55Y90.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.000ns (1000.000MHz) (Tcp)
+  Physical resource: periferico/uart_rxd2/CLK
+  Logical resource: periferico/uart_rxd2/CK
+  Location pin: SLICE_X55Y90.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: periferico/rx_busy/CLK
+  Logical resource: periferico/rx_busy/CK
+  Location pin: SLICE_X83Y65.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: periferico/rx_busy/CLK
+  Logical resource: periferico/rx_busy/CK
+  Location pin: SLICE_X83Y65.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.000ns (1000.000MHz) (Tcp)
+  Physical resource: periferico/rx_busy/CLK
+  Logical resource: periferico/rx_busy/CK
+  Location pin: SLICE_X83Y65.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: periferico/rx_bitcount<1>/CLK
+  Logical resource: periferico/rx_bitcount_0/CK
+  Location pin: SLICE_X83Y66.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: periferico/rx_bitcount<1>/CLK
+  Logical resource: periferico/rx_bitcount_0/CK
+  Location pin: SLICE_X83Y66.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.000ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.000ns (1000.000MHz) (Tcp)
+  Physical resource: periferico/rx_bitcount<1>/CLK
+  Logical resource: periferico/rx_bitcount_0/CK
+  Location pin: SLICE_X83Y66.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.803|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 452 paths, 0 nets, and 161 connections
+
+Design statistics:
+   Minimum period:   3.803ns{1}   (Maximum frequency: 262.950MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Tue Mar 13 15:49:01 2018 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 772 MB
+
+
+
